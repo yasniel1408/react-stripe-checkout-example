@@ -1,22 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import StripeCheckoutButton from "./components/stripe.button.component";
 
 function App() {
+  const totalPrice = 58;
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>Make Stripe Payment @ Freaky Jolly</h1>
+        <p>Pay Total of $ {totalPrice}</p>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <StripeCheckoutButton price={totalPrice} />
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
